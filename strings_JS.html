@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100vw;
+            background-color: blanchedalmond;
+        }
+
+        .innerClock {
+            height: 50vh;
+            width: 50vw;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- String Length -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var string = "Welcome To My House";
+        document.getElementById('demo').innerHTML=string.length; */
+
+    </script>
+
+    <!-- String Concate -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var a1 = "Hello";
+        var a2 = "World";
+        var a3 = "From";
+        var a4 = "JavaScript"; 
+
+        document.getElementById('demo').innerHTML = a1 + " " + " " + a2 + " " + " " + a3 + " " + " " +a4; */
+    </script>
+
+    <!-- String Search () Method -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var s1 = "Hello From JavaScript";
+        var s2 = s1.search('Script');
+
+        document.getElementById('demo').innerHTML = (s2); /*
+    </script>
+
+    <!-- String Slice () Method -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var g1 = "Hello From JavaSript";
+        var g2 = g1.slice(0,5); 
+
+        document.getElementById('demo').innerHTML = (g2); */
+
+    </script>
+
+    <!-- String Replace () Method -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var f1 = "Hello From JavaScript";
+        var f2 = f1.replace("Hello", "Hiii");
+
+        document.getElementById('demo').innerHTML = (f2); */
+    </script>
+
+    <!-- String UpperCase () & LowerCase () Method -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var d1 = "Hello From Java Script";
+        var d2 = d1.toUpperCase();
+        var d3 = d1.toLocaleLowerCase();
+
+        document.getElementById('demo').innerHTML = (d2 + "<br>" + d3); */
+    </script>
+
+    <!-- String Trim () Method -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var h1 = "     Hello    From      JavaScript        ";
+        var h2 = h1.trim();
+
+        document.getElementById('demo').innerHTML = (h2); */
+    </script>
+
+    <!-- Date -->
+
+    <!-- <h1 id="demo"></h1> -->
+
+    <script>
+        /* var date = new Date();
+        document.getElementById('demo').innerHTML = (date); */
+    </script>
+
+    <!-- Clock -->
+
+    <div class="main">
+        <div class="innerClock">
+            <div class="time">
+                <span id="hours"></span>:
+                <span id="min"></span>:
+                <span id="secs"></span>
+                <span id="ampm"></span>
+            </div>
+            <div class="date">
+                <span id="day"></span>/
+                <span id="date"></span>/
+                <span id="month"></span>/
+                <span id="year"></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+        var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+        setInterval(() => {
+
+            var d = new Date();
+
+            document.querySelector("#hours").innerHTML = d.getHours();
+            document.querySelector("#min").innerHTML = d.getMinutes();
+            document.querySelector("#secs").innerHTML = d.getSeconds();
+
+            document.querySelector("#day").innerHTML = days[d.getDay()];
+            document.querySelector("#date").innerHTML = d.getDate();
+            document.querySelector("#month").innerHTML = months[d.getMonth()];
+            document.querySelector("#year").innerHTML = d.getFullYear();
+
+            var hours = d.getHours();
+
+            if (hours > 0 && hours < 12){
+            document.querySelector("#ampm").innerHTML = "AM";
+        }
+            else {
+            document.querySelector("#ampm").innerHTML = "PM";
+
+        }
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
